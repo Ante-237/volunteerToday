@@ -22,7 +22,7 @@ ul {
   .naviga{
     background-color: #1E1E2F;
     image-rendering: pixelated;
-    width: 1333px;
+   
   }
   .naviga h1{
     text-align: center;
@@ -33,7 +33,7 @@ ul {
   }
   .center{
     background-color: #E5E5E5;
-    width: 1333px;
+    
     border-radius: 25px;
   }
   .contact{
@@ -98,12 +98,31 @@ ul {
     left: 50.44%;
     right: 42.2%;
 }
-.Footer{
-    position: absolute;
-    width: 1333px;
-    height: 80px;
-    background: #1E1E2F;
+
+/*  title main formating*/
+
+.main-title {
+    padding-top: 10px;
+    padding-bottom: 15%;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 76px;
+    text-align: center;
+    color: #FFFFFF;
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* user picture formating */
 #b{
     position: absolute;
     width: 212px;
@@ -182,39 +201,109 @@ color: #5C5959;
     
     color: #5C5959;
 }
+
+/* contact formatting for content */
 #call{
     position: absolute;
 left: 43%;
 right: 80%;
 top: 635px
 }
+
 #loc{
     position: absolute;
     left: 43%;
     right: 90%;
     top: 675px;
 }
+
 #mail{
     position: absolute;
     left: 43%;
     right: 90%;
     top: 725px;
 }
+
 #email{
     position: absolute;
     left: 47%;
 }
+
 .circle{
   float: right;
 }
+
 #yellow-circle{
   margin-top: 80px;
 }
+
 #small{
   float: right;
   margin-top: 70px;
   margin-left: 85%;
 }
+
 #vector{
 margin-right: 100px;
 }
+
+
+
+
+/* footer css styling that can be used for other pages as well. */
+
+
+footer {
+    background-color: #1E1E2F;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+    .footer-links a:hover {
+        color: #007bff;
+    }
+
+.footer-copyright {
+    font-size: 14px;
+    color: white;
+}
+
+    .footer-copyright p {
+        margin: 0;
+    }
+
+@media screen and (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        margin-bottom: 20px;
+    }
+
+        .footer-links a {
+            margin-right: 0;
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+        }
+}
+
