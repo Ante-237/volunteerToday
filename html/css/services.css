@@ -84,8 +84,8 @@ li {
 
 .main-title {
   
-    padding-top: 10px;
-    padding-bottom: 15%;
+
+    padding-bottom: 1%;
    
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -113,7 +113,7 @@ li {
 
 .service-card {
     width: 500px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
@@ -164,10 +164,15 @@ li {
 .mid-section {
     display: flex;
     flex-wrap: wrap;
-    height: 1000px;
+
     justify-content: center;
     background-color: #F4F5F7;
     border-radius: 40px;
+}
+
+.mid-empty {
+    background-color: #F4F5F7;
+    height: 800px;
 }
 
 
