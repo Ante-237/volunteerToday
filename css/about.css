@@ -1,0 +1,220 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: rgb(230, 218, 218);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #e7b660;
+  }
+  .naviga{
+    background-color: #1E1E2F;
+    image-rendering: pixelated;
+    width: 1333px;
+  }
+  .naviga h1{
+    text-align: center;
+    color: white;
+  }
+  .naviga img{
+    float: right;
+  }
+  .center{
+    background-color: #E5E5E5;
+    width: 1333px;
+    border-radius: 25px;
+  }
+  .contact{
+    background-color:  #e7b660;
+    width: 1333px;
+    height: 300px;
+    margin-top: 50px;
+  }
+  .container{
+    background-color:#25173a ;
+  }
+  h2{
+    text-align: center;
+    color: #979797;
+  }
+#a{
+    text-align: center;
+}
+.image {
+        display: flex;
+        justify-content: center;
+}
+.image img{
+    border-radius: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.contact p{
+    text-align: center;
+}
+#high{
+    text-align: right;
+}
+.fot li{
+    text-align: center;
+    font-size: 10.62px;
+}
+#support{
+    position: absolute;
+    left: 38.65%;
+    right: 58.58%;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.9464px;
+    line-height: 16px;
+    text-align: center;
+}
+#privacy{
+    position: absolute;
+    left: 43.5%;
+    right: 60%;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11.9464px;
+    line-height: 10px;
+    text-align: center;
+}
+#terms{
+    position: absolute;
+    left: 50.44%;
+    right: 42.2%;
+}
+.Footer{
+    position: absolute;
+    width: 1333px;
+    height: 80px;
+    background: #1E1E2F;
+}
+#b{
+    position: absolute;
+    width: 212px;
+    height: 34px;
+    left: 180px;
+    top: 500px;
+    color: #5C5959;
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+#g{
+    position: absolute;
+    width: 212px;
+    height: 34px;
+    left: 380px;
+    top: 500px;
+
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+
+    color: #5C5959;
+}
+#is{
+    position: absolute;
+width: 212px;
+height: 34px;
+left: 580px;
+top: 500px;
+
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 900;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+
+color: #5C5959;
+}
+#sh{
+    position: absolute;
+width: 212px;
+height: 34px;
+left: 770px;
+top: 500px;
+
+font-family: 'Nunito Sans';
+font-style: normal;
+font-weight: 900;
+font-size: 18px;
+line-height: 25px;
+text-align: center;
+
+color: #5C5959;
+}
+#ante{
+    position: absolute;
+    width: 212px;
+    height: 34px;
+    left: 950px;
+    top: 500px;
+    
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #5C5959;
+}
+#call{
+    position: absolute;
+left: 43%;
+right: 80%;
+top: 635px
+}
+#loc{
+    position: absolute;
+    left: 43%;
+    right: 90%;
+    top: 675px;
+}
+#mail{
+    position: absolute;
+    left: 43%;
+    right: 90%;
+    top: 725px;
+}
+#email{
+    position: absolute;
+    left: 47%;
+}
+.circle{
+  float: right;
+}
+#yellow-circle{
+  margin-top: 80px;
+}
+#small{
+  float: right;
+  margin-top: 70px;
+  margin-left: 85%;
+}
+#vector{
+margin-right: 100px;
+}
