@@ -60,9 +60,10 @@ ul {
   }
    
   .lightboxContainer:after {
-    content:url("/images/playbutton.png");
+    content:url("images/playbutton.png");
     background-color: #5454D4;
     border-radius: 50%;
+    border-style: none;
     z-index:999;
     position:absolute;
     top:50%;
