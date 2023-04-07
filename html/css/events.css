@@ -1,0 +1,144 @@
+/* Navigation Bar */
+nav {
+    background-color: #1E1E2F;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+  
+  }
+  
+  nav a {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    background-color: #e7b660;
+    color: #25173a;
+  }
+  
+  nav .active {
+    background-color: #e7b660;
+    color: #25173a;
+  }
+  
+  /* Main Content Section */
+  main {
+    background-color: #E5E5E5;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  
+  h1 {
+    color: #FFFFFF;
+    font-size: 2rem;
+  }
+  
+  h2 {
+    color: #979797;
+    font-size: 1.5rem;
+  }
+  
+  p {
+    color: #5C5959;
+    font-size: 1.2rem;
+  }
+  
+  /* Events Cards */
+  .grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 0.5rem;
+    width: 300px;
+    height: 400px;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card h2 {
+    color: #1E1E2F;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    color: #5C5959;
+    font-size: 1.2rem;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background-color: #e7b660;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  
+  
+  .contact-section h2 {
+    color: #25173a;
+    font-size: 1.5rem;
+  }
+  
+  .contact-section p {
+    color: #5C5959;
+    font-size: 1.2rem;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #25173a;
+    color: #FFFFFF;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+  }
+  
+  footer p {
+    font-size: 1.2rem;
+  }
+  
+  /* Navigation Links */
+  nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin-right: 2rem;
+  }
+  
+  nav ul li a {
+    color: rgb(230, 218, 218);
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    color: #FFFFFF;
+  }
+  
