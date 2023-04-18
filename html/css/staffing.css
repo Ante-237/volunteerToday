@@ -10,8 +10,6 @@ body {
     background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
 }
 
-
-
 /* animating the lazy folk text to flip around */
 /* ---------------------------------------------*/
 .flip-container {
@@ -130,130 +128,98 @@ section {
     padding: 0 50%;
     position: fixed;
 }
-/* --------------------------------------------------------- */
-/* card view styling */
 
-.c-card h2{
-    color: white;
-}
 
-.c-card p {
-    color: white;
-}
-
-.c-container {
+/* body */
+.card-container {
     display: flex;
     flex-wrap: wrap;
-   
-    justify-content: space-around;
-    align-items: center;
     justify-content: center;
-    align-items: center;
-   
- 
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10%;
+    border-radius: 10px;
 }
 
-.c-card {    
-    margin: 10%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 1, 10);
-    text-align: center;
-    padding: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-c-container h2{
-    padding-top: 300px;
-}
-
-    .c-card img {
-        max-width: 300px;
-        height: 50%;
-        border-radius: 20%;
-    }
-
-@media screen and (max-width: 768px) {
-    .c-card {
-        width: 300px;
-        margin: 10px 0;
-
-        
-    }
-
-    .c-container {
-        padding-top: 200px;
-        padding-bottom: 200px;
-        height: 100%;
-    }
-
-        .c-card img {
-            max-width: 100px;
-            height: 50%;
-            border-radius: 10%;
-        }
-}
-
-
-/* animating the card-view */
-.c-card:hover {
-    transform: scale(1.1);
-}
-
-.c-card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.c-card img.staffing {
-    height: 400px;
+.card {
+    flex: 1;
     
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.c-card button{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    .card img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .card .card-header {
+        
+        padding: 20px;
+        text-align: center;
+    }
+
+        .card .card-header h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+    .card .card-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+        .card .card-content p {
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .card .card-content button {
+            background-color: #007bff;
+            margin-top: 30%;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+            .card .card-content button:hover {
+                background-color: rgba(251, 168, 28, 0.4);
+            }
+
+
+
+
+            .card .card-content button:hover {
+                transform: scale(1.1);
+            }
+
+                .card .card-content button:focus {
+                    outline: none;
+                }
+
+@keyframes increase-size {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
-
-/* button round with animation coloring */
-.c-card button{
-    border-radius: 50px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: transform 0.3s ease-in-out;
+.card .card-content button.increase-size-animation {
+    animation-name: increase-size;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
-
-.showoff:hover {
-    background-color: rgba(251, 168, 28, 0.4);
-    transform: scale(1.1);
-}
-
-
-.c-card h2 {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-.c-card p {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -339,4 +305,4 @@ footer {
             padding: 0 20px;
             font-size: 16px;
         }
- /* ---------------------------------------------  */
+    /* ---------------------------------------------  */
