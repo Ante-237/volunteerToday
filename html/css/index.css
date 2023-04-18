@@ -29,6 +29,7 @@ header {
 
   .naviga {
     display: flex;
+    
   }
 
   .naviga a {
@@ -80,10 +81,9 @@ section{
     font-size: 53.0952px;
     line-height: 56px;
     /* or 105% */
-
-
     color: #FFFFFF;
 }
+
 .volunteer-text p{
     position: absolute;
     width: 355.74px;
@@ -102,6 +102,7 @@ section{
 
     color: rgba(255, 255, 255, 0.7);
 }
+
 .volunteer-img{
 
     width: 434.91px;
