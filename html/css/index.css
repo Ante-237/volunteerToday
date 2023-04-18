@@ -1,39 +1,104 @@
 *{
-    padding: 0;
+   
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    list-style: none;
     text-decoration: none;
      }
 body {
-  overflow-x: hidden;
+    overflow-x: hidden;
+    background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
 }
 
+
+
+/* animating the lazy folk text to flip around */
+/* ---------------------------------------------*/
+.flip-container {
+    perspective: 1000px;
+    display: flex;
+   
+}
+
+.flipper {
+    width: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+   
+}
+
+.front, .logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.logo {
+    
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(360deg);
+}
+
+/* 0---------------------------------0 */
+ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin: 0;
+}
+
+.header-grouping{
+    
+}
+
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  
+    .naviga {
+        flex-direction: column;
+    }
+
+    li.extraF {
+        margin: 10px 0;
+        margin-top: 30px;
+    }
+}
+
+
+/* -----------------------------------------   */
+/* manipulation */
 header {
     position: fixed;
-    right: 0;
     top: 0;
     z-index: 1000;
     width: 100%;
+   
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 7%;
+    padding-top: 25px;
+    padding-bottom: 25px;
     background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
   }
 
   .logo {
     font-size: 30px;
-    font-weight: 700px;
+    font-weight: 700;
     color: white;
-    margin-right: 650px; /* Add some margin to the right side of the logo */
+    margin-right: 70px; /* Add some margin to the right side of the logo */
   }
 
-  .naviga {
+.naviga {
     display: flex;
+    justify-content: space-between;
     
-  }
+}
+
 
   .naviga a {
     color: white;
@@ -143,6 +208,9 @@ img.smooth{
     border: 1px solid white;
     transform: translateX(8px);
 }
+
+/* --------------------------------------------------------- */
+/* volunteer  below section */
 .volunteer-below-page{
     height:100%;
     width: 100%;
@@ -160,6 +228,8 @@ img.smooth{
     height: 100%;
     left: 79.64px;
     top: 98.44px;
+    display: flex;
+    margin: 0 auto;
 
     font-family: 'Abhaya Libre';
     font-style: normal;
@@ -196,14 +266,17 @@ img.smooth{
     top: 212px;
 }
 
-.bottom-img{
-    width: 100%;
+.bottom-img {
+    padding-top: 50px;
+    width: 50%;
+    margin-left: 40%;
     overflow: hidden;
+    border-radius: 30%;
 }
 
 .bottom-img img {
     position: relative;
-    z-index: 1;
+ 
     width: 100%;
     height: auto;
 }
@@ -304,3 +377,4 @@ footer {
 				padding: 0 20px;
 				font-size: 16px;
 			}
+
