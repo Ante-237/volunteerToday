@@ -6,6 +6,9 @@
     list-style: none;
     text-decoration: none;
      }
+body {
+  overflow-x: hidden;
+}
 
 header {
     position: fixed;
@@ -66,6 +69,7 @@ header {
 }
 section{
     padding:0 50%;
+    position: fixed;
 }
 
 .volunteer-text h1{
@@ -282,3 +286,21 @@ footer {
         }
 }
 
+@media only screen and (min-width: 768px) {
+			nav {
+				flex-direction: row;
+				background-color: transparent;
+				color: #333;
+				position: static;
+				top: auto;
+				left: auto;
+				width: auto;
+				height: auto;
+				transition: none;
+			}
+
+			nav a {
+				display: inline-block;
+				padding: 0 20px;
+				font-size: 16px;
+			}
