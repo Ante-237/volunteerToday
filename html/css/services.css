@@ -1,185 +1,272 @@
-﻿ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-
-
-li {
-    float: right;
-}
-
-    li a {
-        display: block;
-        color: rgb(230, 218, 218);
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-        li a:hover {
-            background-color: #5454D4;
-        }
-
-.container {
-    background-color: #19191B;
-    color: white;
-    padding-right: 10%;
-    padding-left: 10%;
-}
-
-.body {
-    padding-top: 1px;
-}
-
-    .body img {
-        float: right;
-    }
-
-    .body h1 p {
-        float: left;
-        padding-bottom: 500px;
-    }
-
-    .body li {
-        float: left;
-    }
-
-        .body li a {
-            background-color: #5454D4;
-            border-radius: 20px;
-        }
-
-.foot p h2 {
-    display: inline;
-    vertical-align: top;
-    font-size: 16px;
-    line-height: 28px;
-}
-
-
-
-.foot {
-    padding-top: 100px;
-}
-
-.lightboxContainer {
-    position: relative;
-    display: inline-block;
-}
-
-    .lightboxContainer:after {
-        content: url("/images/playbutton.png");
-        background-color: #5454D4;
-        border-radius: 50%;
-        z-index: 999;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -32px;
-        margin-top: -32px;
-    }
-
-.main-title {
-  
-
-    padding-bottom: 1%;
-   
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 76px;
-    text-align: center;
-    color: #FFFFFF;
-   
-}
-
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
 }
 
 
-/* cardview area*/
-.services-container {
+
+/* animating the lazy folk text to flip around */
+/* ---------------------------------------------*/
+.flip-container {
+    perspective: 1000px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.service-card {
-    width: 500px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-    overflow: hidden;
-    background-color: #DEBD88;
+.flipper {
+    width: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
 
-    .service-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.front, .logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    transform: rotateY(0deg);
+}
+
+.flip-container:hover .flipper {
+    transform: rotateY(360deg);
+}
+
+/* 0---------------------------------0 */
+ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    margin: 0;
+}
+
+.header-grouping {
+}
+
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+
+    .naviga {
+        flex-direction: column;
     }
 
-    .service-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
+    li.extraF {
+        margin: 10px 0;
+        margin-top: 30px;
+    }
+}
+
+
+/* -----------------------------------------   */
+/* manipulation */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-right: 70px; /* Add some margin to the right side of the logo */
+}
+
+.naviga {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+    .naviga a {
+        color: white;
+        margin-left: 60px;
+        font-weight: 350;
+        border-bottom: 2px solid transparent;
+        transition: all .55s ease;
     }
 
-    .service-card h3 {
-        margin: 20px;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .service-card p {
-        margin: 0 20px 20px;
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .service-card a {
-        display: block;
-        margin: 0 20px 20px;
-        padding: 10px 20px;
-        background-color: #007bff;
-
-        text-align: center;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-    }
-
-        .service-card a:hover {
-            background-color: #0056b3;
+        .naviga a:hover {
+            border-bottom: 2px solid transparent;
+            color: #f0a12b;
         }
 
-/* mid section styling for handling the card view */
-.mid-section {
+#menu-icon {
+    color: white;
+    font-size: 30px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.volunteer {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 50%;
+    position: fixed;
+}
+/* --------------------------------------------------------- */
+/* card view styling */
+
+.c-card h2{
+    color: white;
+}
+
+.c-card p {
+    color: white;
+}
+
+.c-container {
     display: flex;
     flex-wrap: wrap;
-
+   
+    justify-content: space-around;
+    align-items: center;
     justify-content: center;
-    background-color: #F4F5F7;
-    border-radius: 40px;
+    align-items: center;
+   
+ 
 }
 
-.mid-empty {
-    background-color: #F4F5F7;
-    height: 800px;
+.c-card {    
+    margin: 10%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 1, 10);
+    text-align: center;
+    padding: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+c-container h2{
+    padding-top: 300px;
+}
+
+    .c-card img {
+        max-width: 300px;
+        height: 50%;
+        border-radius: 20%;
+    }
+
+@media screen and (max-width: 768px) {
+    .c-card {
+        width: 300px;
+        margin: 10px 0;
+
+        
+    }
+
+    .c-container {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        height: 100%;
+    }
+
+        .c-card img {
+            max-width: 100px;
+            height: 50%;
+            border-radius: 10%;
+        }
+}
+
+
+/* animating the card-view */
+.c-card:hover {
+    transform: scale(1.1);
+}
+
+.c-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.c-card img.staffing {
+    height: 400px;
+    
+}
+
+.c-card button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* button round with animation coloring */
+.c-card button{
+    border-radius: 50px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.c-card:hover {
+    background-color: rgba(251, 168, 28, 0.4);
+    transform: scale(1.1);
+}
+
+
+.c-card h2 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.c-card p {
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 
 
-/* footer css styling that can be used for other pages as well. */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* modifying the footer */
 footer {
     background-color: #1E1E2F;
     padding: 20px 0;
@@ -234,4 +321,22 @@ footer {
         }
 }
 
+@media only screen and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        background-color: transparent;
+        color: #333;
+        position: static;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+        transition: none;
+    }
 
+        nav a {
+            display: inline-block;
+            padding: 0 20px;
+            font-size: 16px;
+        }
+ /* ---------------------------------------------  */
