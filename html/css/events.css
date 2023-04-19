@@ -1,144 +1,346 @@
-/* Navigation Bar */
+/* General styles */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  margin-right: 70px; /* Add some margin to the right side of the logo */
+}
+/* Navigation styles */
+.flip-container {
+  perspective: 1000px;
+  display: flex;
+}
+
+.flipper {
+  width: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.front, .logo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(360deg);
+}
+
+
+
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  margin-right: 70px; /* Add some margin to the right side of the logo */
+}
+
+.naviga {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+
+  .naviga a {
+      color: white;
+      margin-left: 60px;
+      font-weight: 350;
+      border-bottom: 2px solid transparent;
+      transition: all .55s ease;
+  }
+
+      .naviga a:hover {
+          border-bottom: 2px solid transparent;
+          color: #f0a12b;
+      }
+
 nav {
-    background-color: #1E1E2F;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 1rem;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-direction: row-reverse; /* Added */
+}
+
+#menu-icon {
+  color: white;
+  font-size: 30px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+li.extraF {
+  margin: 10px 0;
+  margin-top: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.extraF {
+  margin-right: auto;
+}
+
+
+nav a:hover,
+nav a.active {
   
+  color: #333;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Main styles */
+
+main {
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  width: 400px;
+  background-color: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+  height: auto;
+  min-height: 400px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+  filter: grayscale(100%) brightness(70%);
+}
+
+.card:hover .card-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%);
+}
+
+.card:hover::before {
+  opacity: 0.8;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  position: relative;
+}
+
+.card-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0s linear 0.2s;
+  z-index: 2;
+  color: #fff;
+}
+
+
+
+/* Contact section styles */
+
+.contact-section {
+  background: linear-gradient(245.59deg, #2F2D4D 0%, #403E46 28.53%, #2B2945 75.52%);
+  padding: 2rem;
+  color: #fff; /* add text color */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+label {
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  resize: vertical;
+  background-color: #eee;
+  color: #333;
+}
+
+textarea {
+  height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.4);
+}
+
+button[type="submit"]:hover {
+  background-color: #FFB300;
+  box-shadow: 0px 4px 8px rgba(255, 215, 0, 0.4);
+}
+
+
+
+/* Footer styles */
+
+footer {
+  background-color: #1E1E2F;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+  .footer-links a:hover {
+      color: #007bff;
   }
-  
+
+.footer-copyright {
+  font-size: 14px;
+  color: white;
+}
+
+  .footer-copyright p {
+      margin: 0;
+  }
+
+@media screen and (max-width: 600px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-links {
+      margin-bottom: 20px;
+  }
+
+      .footer-links a {
+          margin-right: 0;
+          margin-bottom: 10px;
+          display: block;
+          text-align: center;
+      }
+}
+
+@media only screen and (min-width: 768px) {
+nav {
+  flex-direction: row;
+  background-color: transparent;
+  color: #333;
+  position: static;
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  transition: none;
+}
+
   nav a {
-    color: #FFFFFF;
-    font-size: 1.2rem;
-    text-decoration: none;
+      display: inline-block;
+      padding: 0 20px;
+      font-size: 16px;
   }
-  
-  nav a:hover {
-    background-color: #e7b660;
-    color: #25173a;
-  }
-  
-  nav .active {
-    background-color: #e7b660;
-    color: #25173a;
-  }
-  
-  /* Main Content Section */
-  main {
-    background-color: #E5E5E5;
-    padding: 2rem;
-    border-radius: 1rem;
-  }
-  
-  h1 {
-    color: #FFFFFF;
-    font-size: 2rem;
-  }
-  
-  h2 {
-    color: #979797;
-    font-size: 1.5rem;
-  }
-  
-  p {
-    color: #5C5959;
-    font-size: 1.2rem;
-  }
-  
-  /* Events Cards */
-  .grid-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .card {
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    margin: 0.5rem;
-    width: 300px;
-    height: 400px;
-    transition: all 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-  }
-  
-  .card-content {
-    padding: 1rem;
-  }
-  
-  .card h2 {
-    color: #1E1E2F;
-    font-size: 1.5rem;
-  }
-  
-  .card p {
-    color: #5C5959;
-    font-size: 1.2rem;
-  }
-  
-  /* Contact Section */
-  .contact-section {
-    background-color: #e7b660;
-    padding: 2rem;
-    border-radius: 1rem;
-  }
-  
-  
-  .contact-section h2 {
-    color: #25173a;
-    font-size: 1.5rem;
-  }
-  
-  .contact-section p {
-    color: #5C5959;
-    font-size: 1.2rem;
-  }
-  
-  /* Footer Section */
-  footer {
-    background-color: #25173a;
-    color: #FFFFFF;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 1rem;
-  }
-  
-  footer p {
-    font-size: 1.2rem;
-  }
-  
-  /* Navigation Links */
-  nav ul {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  nav ul li {
-    margin-right: 2rem;
-  }
-  
-  nav ul li a {
-    color: rgb(230, 218, 218);
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    color: #FFFFFF;
-  }
-  
+}
