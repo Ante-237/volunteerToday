@@ -274,10 +274,10 @@ img.smooth{
 
 .bottom-img {
     padding-top: 50px;
-    width: 50%;
+    width: 40%;
     margin-left: 40%;
     overflow: hidden;
-    border-radius: 30%;
+    border-radius: 5%;
 }
 
 .bottom-img img {
