@@ -1,11 +1,12 @@
 const contactForm = document.getElementById('contact-form');
 const submitButton = document.getElementById('but');
+const testField = document.getElementById('test')
 
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 
-const urlConst = 'http://127.0.0.1:8000/api/personal';
+const requestUrl = "http://127.0.0.1:8000/api/personal";
 
 function validateEmail(email) {
     // regular expression for validating email addresses
@@ -13,35 +14,37 @@ function validateEmail(email) {
     return emailRegex.test(email);
 }
 
-function submitForm(event) {
-    event.preventDefault();
+function submitForm() {
+    //event.preventDefault();
 
     const nameV = name.value;
     const emailV = email.value;
     const messageV = message.value;
 
     // validate email address using regex
-    if(!validateEmail(email)) {
+    if (!validateEmail(emailV)) {
         alert('Please enter a valid email address.');
         return;
     }
 
-    const data = {
+    const payload = {
         name: nameV,
         email: emailV,
         info: messageV
     };
 
-    fetch(urlConst, {
-        method: 'POST',
+    fetch(requestUrl, {
+        method: "POST",
+        body: JSON.stringify(payload),
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+            "Content-Type": "application/json"
+        }
+
     })
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            testField.textContent = data.name;
         })
         .catch(error => {
             console.error('Error:', error);

@@ -31,6 +31,7 @@ newJokeButton.addEventListener('click', fetchJoke);
 // fetch a joke when the page loads
 fetchJoke();
 */
+/*
 
 const eventsList = document.getElementById('grid-container-id');
 const newJokeButton = document.getElementById('but');
@@ -80,9 +81,7 @@ function displayEvents(events) {
     cardView.appendChild(cardContent);
     eventsList.appendChild(cardView);
 
-    // const li = document.createElement('li');
-    // li.textContent = '${event.name} (${event.date}) - ${event.location}';
-    // eventsList.appendChild(li);
+ 
      });
 }
 
@@ -101,8 +100,6 @@ function loadEvents() {
         })
 }
 
-
-// newJokeButton.addEventListener('click', displayEvents);
 
 /*
 function loadEvents() {
@@ -129,3 +126,7 @@ function loadEvents() {
 // reload the events every 10 seconds
 // setInterval(loadEvents, 10000);
 loadEvents();
+
+
+
+
