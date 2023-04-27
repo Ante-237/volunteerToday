@@ -1,4 +1,5 @@
 const contactForm = document.getElementById('contact-form');
+const submitButton = document.getElementById('but');
 
 function validateEmail(email) {
     // regular expression for validating email addresses
@@ -21,7 +22,7 @@ function submitForm(event) {
 
     // make a POST request to the API endpoint using AJAX
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://127.0.0.1:8080/api/personal');
+    xhr.open('POST', 'http://127.0.0.1:8000/api/personal');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = () => {
         if (xhr.status === 200) {
@@ -36,4 +37,4 @@ function submitForm(event) {
     xhr.send(requestBody);
 }
 
-contactForm.addEventListener('submit', submitForm);
+submitButton.addEventListener('submit', submitForm);
