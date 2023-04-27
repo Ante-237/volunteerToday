@@ -1,4 +1,4 @@
-const eventsList = document.getElementById('events-list');
+const eventsList = document.getElementById('grid-container');
 
 function displayEvents(events) {
     // clear existing events from the list 

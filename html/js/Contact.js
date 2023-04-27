@@ -22,7 +22,7 @@ function submitForm(event) {
 
     // make a POST request to the API endpoint using AJAX
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://127.0.0.1:8000/api/personal');
+    xhr.open('POST', 'http://127.0.0.1:8080/api/personal');
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.onload = () => {
         if (xhr.status === 200) {
