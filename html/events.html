@@ -18,8 +18,6 @@
               </div>
 
               <!-- taking the box to one side -->
-
-
               <li class="extraF"><a href=""></a></li>
               <li><a href="index.html">Home</a></li>
               <li><a href="services.html">Services</a></li>
@@ -31,12 +29,12 @@
       <div class="bx bx-menu" id="menu-icon"></div>
       <main>
           <h1>Upcoming Events</h1>
-          <div class="grid-container">
+          <div class="grid-container" id="grid-container-id">
               <div class="card">
                   <img src="images/event1.jpg" alt="Event 1" />
 
                   <div class="card-content">
-                      <h2>Community Clean-Up</h2>
+                      <h2 id="headingOne">Community Clean-Up</h2>
                       <p>
                           Join us in our efforts to clean up the local park and make it a
                           better place for everyone.
@@ -47,7 +45,7 @@
               <div class="card">
                   <img src="images/event2.jpg" alt="Event 2" />
                   <div class="card-content">
-                      <h2>Food Drive</h2>
+                      <h2 id="headingTwo">Food Drive</h2>
                       <p>
                           Help us collect and distribute food to families in need in our
                           community.
@@ -58,14 +56,13 @@
               <div class="card">
                   <img src="images/event3.jpg" alt="Event 3" />
                   <div class="card-content">
-                      <h2>Blood Drive</h2>
+                      <h2 id="headingThree">Blood Drive</h2>
                       <p>
                           Give the gift of life by donating blood at our upcoming blood
                           drive.
                       </p>
                   </div>
               </div>
-
           </div>
       </main>
       <section class="contact-section">
@@ -94,9 +91,9 @@
           </div>
       </footer>
 
-      <!--  <script src="js/events.js">  </script> -->
+      <script scr="js/getevents.js"></script>
+      <script src="js/events.js">  </script>   
       <script src="js/Contact.js"></script>
-      <script scr="js/Event.js"></script>
   </body>
 
 </html>
