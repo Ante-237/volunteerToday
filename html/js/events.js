@@ -47,7 +47,7 @@ function displayEvents(events) {
     cardView.classList.add('card');
 
     const cardImage = document.createElement('img');
-    cardImage.src = "images/event1.jpg";
+        cardImage.src = "https://www.foodiesfeed.com/wp-content/uploads/2021/01/fried-egg-and-guacamole-sandwiches.jpg";
 
     const cardContent = document.createElement('div');
     cardContent.classList.add('card-content');
@@ -64,6 +64,8 @@ function displayEvents(events) {
     Place.textContent = event.place;
    // Place.textContent = "contentTest"
 
+    const spaceT = document.createElement('br');
+
     const timeDate = document.createElement('p2');
     timeDate.textContent = event.datePlace;
    // timeDate.textContent = "contentDate";
@@ -72,6 +74,7 @@ function displayEvents(events) {
     cardContent.appendChild(title);
     cardContent.appendChild(requirements);
     cardContent.appendChild(Place);
+    cardContent.appendChild(spaceT);
     cardContent.appendChild(timeDate);
 
     cardView.appendChild(cardContent);
