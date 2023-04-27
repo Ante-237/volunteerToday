@@ -47,7 +47,7 @@ function displayEvents(events) {
     cardView.classList.add('card');
 
     const cardImage = document.createElement('img');
-        cardImage.src = "https://www.foodiesfeed.com/wp-content/uploads/2021/01/fried-egg-and-guacamole-sandwiches.jpg";
+    cardImage.src = event.imageSource;
 
     const cardContent = document.createElement('div');
     cardContent.classList.add('card-content');
