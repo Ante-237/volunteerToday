@@ -6,8 +6,38 @@ function displayEvents(events) {
 
     // add each event to the list as a new <li> element
     events.forEach(event => {
-        const li = document.createElement('li');
-        li.textContent = '${event.name} (${event.date}) - ${event.location}';
+        // creating the cardview for addition of resources
+        const cardView = document.createElement('div');
+        cardView.classList.add('card');
+
+        const cardImage = document.createElement('img');
+        cardImage.src = "images/event1.jpg";
+
+        const cardContent = document.createElement('div');
+        cardContent.classList.add('card-content');
+
+        const title = document.createElement('h2');
+        title.textContent = events.title;
+
+        const requirements = document.createElement('p');
+        requirements.textContent = events.requirement;
+
+        const Place = document.createElement('p2');
+        Place.textContent = events.place;
+
+        const timeDate = document.createElement('p3');
+        timeDate.textContent = events.datePlace;
+
+        cardView.appendChild(cardImage);
+        cardContent.appendChild(title);
+        cardContent.appendChild(requirements);
+        cardContent.appendChild(Place);
+        cardContent.appendChild(timeDate);
+
+        cardView.appendChild(cardContent);
+
+        // const li = document.createElement('li');
+        // li.textContent = '${event.name} (${event.date}) - ${event.location}';
         eventsList.appendChild(li);
     });
 }
